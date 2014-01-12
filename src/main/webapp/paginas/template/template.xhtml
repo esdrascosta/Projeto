@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<f:view contentType="text/html" locale="pt_BR">
+	<h:head>
+		<title>
+			<ui:insert name="titulo">
+					<h:outputText value="#{mensagens.titulo_aplicacao}" />
+			</ui:insert>
+		</title>
+		<ui:insert name="head">
+		
+		</ui:insert>
+	</h:head>
+	<h:body>
+		<div id="master">
+            <div id="cabecalho">
+			</div>            
+        	<p:messages id="globalMessages" showDetail="true" showSummary="false" autoUpdate="true" redisplay="true"/>
+            <p:growl id="globalMessagesPopup" showDetail="true" showSummary="false" life="5000" autoUpdate="true"/>
+			<div id="content">
+				<ui:insert name="content">
+					Algum conteudo
+				</ui:insert>
+			</div>
+		</div>
+	</h:body>
+	<h:outputStylesheet library="css" name="estilo.css" />
+	<h:outputScript library="javax.faces" name="jsf.js"/>  
+	<h:outputScript library="js" name="script.js" />
+	<h:outputScript library="js" name="datepicker.js" />
+</f:view>
+</html>
