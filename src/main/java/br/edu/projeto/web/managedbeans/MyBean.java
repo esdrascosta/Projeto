@@ -19,7 +19,7 @@ public class MyBean {
 
 	public void destroyWorld(ActionEvent actionEvent) {
 		FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO,
-				"Erro no Sistema", "Porfavor Tente mais tarde");
+				"Erro no Sistema!!", "Porfavor Tente mais tarde");
 		FacesContext.getCurrentInstance().addMessage(null, message);
 	}
 }
